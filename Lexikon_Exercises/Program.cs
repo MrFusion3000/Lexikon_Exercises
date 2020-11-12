@@ -31,8 +31,8 @@ namespace Lexikon_Exercises
                 Console.WriteLine("\t\t\tVälj ett alternativ (och tryck Enter):\n");
                 Console.WriteLine("\t\t\t1. Uppg  1 - Print welcome message  ");
                 Console.WriteLine("\t\t\t2. Uppg  2 - DateTime");
-                Console.WriteLine("\t\t\t3. Uppg  3 - ");
-                Console.WriteLine("\t\t\t4. Uppg  4 - ");
+                Console.WriteLine("\t\t\t3. Uppg  3 - Enter name and print");
+                Console.WriteLine("\t\t\t4. Uppg  4 - String manipulation");
                 Console.WriteLine("\t\t\t5. Uppg  5 - ");
                 Console.WriteLine("\t\t\t6. Uppg  6 - ");
                 Console.WriteLine("\t\t\t7. Uppg  7 - ");
@@ -50,9 +50,9 @@ namespace Lexikon_Exercises
                     case 2:
                         Exercise2();
                         break;
-                    //case 3:
-                    //Exercise1();
-                    //    break;
+                    case 3:
+                        Exercise3();
+                        break;
                     //case 4:
                     //Exercise1();
                     //    break;
@@ -122,10 +122,32 @@ namespace Lexikon_Exercises
 
         public void Exercise2()
         {
+            DateTime today = DateTime.Today;
+            DateTime yesterday = today.AddDays(-1);
+            DateTime tomorrow = today.AddDays(+1);
 
+            Console.WriteLine("Todays date is {0}", today);
+            Console.WriteLine("Tomorrows date is {0}", tomorrow);
+            Console.WriteLine("Yesterday date was is {0}", yesterday);
+
+            Console.ReadKey();
         }
 
         public void Exercise3()
+        {
+            Console.Write("Enter your Firstname: ");
+            string firstName = Console.ReadLine();
+            Console.Write("Enter your Lastname: ");
+            string lastName = Console.ReadLine();
+
+            Console.Clear();                        // Rensa skärmen
+
+            Console.WriteLine("Hello {0} {1}! \n", firstName, lastName);
+
+            Console.ReadKey();
+        }
+
+        public void Exercise4()
         {
 
         }
